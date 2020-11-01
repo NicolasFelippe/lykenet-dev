@@ -14,16 +14,6 @@ $(document).ready(function(){
     // LYKENET.escolherCidade()
 })
 
- $(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-    console.log(scroll)
-      if (scroll >= 40) {               // se rolar 40px ativa o evento
-        // $(".infos").hide();    //coloca a classe "ativo" no id=menu
-      } else {
-        $("#menu").removeClass("ativo"); //se for menor que 40px retira a classe "ativo" do id=menu
-      }
-    });
-
 
  // Back to top button
  $(window).scroll(function() {
