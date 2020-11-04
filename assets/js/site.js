@@ -95,6 +95,11 @@ async function escolherCidade() {
     allowOutsideClick: false,
     allowEscapeKey: false,
     confirmButtonText: 'Seguir para o site',
+    inputValidator: (value) => {
+      if (!value) {
+        return 'Escolha uma cidade!'
+      }
+    }
   })
 
   var city = new Object
