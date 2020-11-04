@@ -1,6 +1,7 @@
-LYKENET= new Object
+LYKENET = new Object
 
-$(document).ready(function(){
+$(document).ready(function () {
+  
   // Activate smooth scroll on page load with hash links in the url
   if (window.location.hash) {
     var initial_nav = window.location.hash;
@@ -11,19 +12,19 @@ $(document).ready(function(){
       }, 1500, 'easeInOutExpo');
     }
   }
-    // LYKENET.escolherCidade()
+ escolherCidade()
 })
 
 
- // Back to top button
- $(window).scroll(function() {
+// Back to top button
+$(window).scroll(function () {
   if ($(this).scrollTop() > 100) {
     $('.back-to-top').fadeIn('slow');
   } else {
     $('.back-to-top').fadeOut('slow');
   }
 });
-$('.back-to-top').click(function() {
+$('.back-to-top').click(function () {
   $('html, body').animate({
     scrollTop: 0
   }, 1500, 'easeInOutExpo');
@@ -32,7 +33,7 @@ $('.back-to-top').click(function() {
 
 // Smooth scroll for the navigation menu and links with .scrollto classes
 var scrolltoOffset = $('#header').outerHeight() - 17;
-$(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
+$(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function (e) {
   if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
     var target = $(this.hash);
     if (target.length) {
@@ -67,37 +68,78 @@ $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
 
 
 
-LYKENET.escolherCidade = async ()=> {
-    
-    const { value: cep } = await Swal.fire({
-      title: 'Digite seu CEP',
-      input: 'text',
-      showCancelButton: false,
-      allowOutsideClick: false,
-      allowEscapeKey: false,
-      confirmButtonText:'Buscar Cidade',
-      inputValidator: (value) => {
-        if (!value) {
-          return 'Digite o Cep para encontrar sua cidade!'
-        }
-      }
-    })
-    $.ajax({
-        url: `https://viacep.com.br/ws/${cep}/json/?callback=`,
-        contentType: "application/json",
-        statusCode: {
-          200: function(data) { 
-              
-            $('#localidade').text(`${data.localidade}`)
-            
-            } // Ok
-          ,400: async function(msg) { 
-             await Swal.fire(msg);  } // Bad Request
-          ,404: async function(msg) {
-               await Swal.fire("CEP não encontrado!!"); } // Not Found
-        }
-      });
-   
+async function escolherCidade() {
+
+  const { value: cidade } = await Swal.fire({
+    title: 'Escolha a sua cidade',
+    input: 'select',
+    icon:'question',
+    customClass:{
+      content:'swal-font',
+      actions:'swal-font',
+      confirmButton:'swal-btn',
+      popup:'swal-pop'
+    },
+    inputPlaceholder:'Escolha a Cidade',
+    inputOptions: {
+      'Matriz': {
+        Curitiba: 'Curitiba',
+      },
+      'Unidades': {
+        FazendaRioGrande: 'Fazenda Rio Grande',
+        Araucaria1: 'Araucária 1',
+        Araucaria2: 'Araucária 2'
+      },
+    },
+    showCancelButton: false,
+    allowOutsideClick: false,
+    allowEscapeKey: false,
+    confirmButtonText: 'Seguir para o site',
+  })
+
+  var city = new Object
+  if (cidade === "Curitiba") {
+    city.name = 'Curitiba'
+    city.rua = 'Rua Margarida de Andrade Weber, 601 - CIC'
+    city.tel = '(41) 3246 4142'
+  }
+  if (cidade === 'FazendaRioGrande') {
+    city.name = 'Fazenda Rio Grande'
+    city.rua = 'Rua Nossa Senhora Aparecida ,1425'
+    city.tel = '(41) 3514 4999'
+  }
+
+  if (cidade === 'Araucaria1') {
+    city.name = 'Araucária 1'
+    city.rua = 'Rua Manoel Ribas, nº 1357, Cachoeira'
+    city.tel = '(41) 4063 7444'
+  }
+  if (cidade === 'Araucaria2') {
+    city.name = 'Araucária 2'
+    city.rua = 'Rua Uirapuru, nº 907, Capela Velha'
+    city.tel = '(41) 4063 7444'
+  }
+  $('#cidadeEscolhida').text(`: ${city.name}`);
+  $('#cidadeContato').text(`${city.name}`);
+  $('#address').text(`${city.rua}`);
+  $('#tel').text(`${city.tel}`);
+
+  // $.ajax({
+  //     url: `https://viacep.com.br/ws/${cep}/json/?callback=`,
+  //     contentType: "application/json",
+  //     statusCode: {
+  //       200: function(data) { 
+
+  //         $('#localidade').text(`${data.localidade}`)
+
+  //         } // Ok
+  //       ,400: async function(msg) { 
+  //          await Swal.fire(msg);  } // Bad Request
+  //       ,404: async function(msg) {
+  //            await Swal.fire("CEP não encontrado!!"); } // Not Found
+  //     }
+  //   });
+
 }
 
 // Mobile Navigation
@@ -109,19 +151,19 @@ if ($('.nav-menu').length) {
   $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="fas fa-bars"></i></button>');
   $('body').append('<div class="mobile-nav-overly"></div>');
 
-  $(document).on('click', '.mobile-nav-toggle', function(e) {
+  $(document).on('click', '.mobile-nav-toggle', function (e) {
     $('body').toggleClass('mobile-nav-active');
     $('.mobile-nav-toggle i').toggleClass('fas fa-bars fas fa-times');
     $('.mobile-nav-overly').toggle();
   });
 
-  $(document).on('click', '.mobile-nav .drop-down > a', function(e) {
+  $(document).on('click', '.mobile-nav .drop-down > a', function (e) {
     e.preventDefault();
     $(this).next().slideToggle(300);
     $(this).parent().toggleClass('active');
   });
 
-  $(document).click(function(e) {
+  $(document).click(function (e) {
     var container = $(".mobile-nav, .mobile-nav-toggle");
     if (!container.is(e.target) && container.has(e.target).length === 0) {
       if ($('body').hasClass('mobile-nav-active')) {
@@ -136,7 +178,7 @@ if ($('.nav-menu').length) {
 }
 
 // Header scroll class
-$(window).scroll(function() {
+$(window).scroll(function () {
   if ($(this).scrollTop() > 100) {
     $('#header').addClass('header-scrolled');
   } else {
@@ -152,10 +194,10 @@ if ($(window).scrollTop() > 100) {
 var nav_sections = $('section');
 var main_nav = $('.nav-menu, .mobile-nav');
 
-$(window).on('scroll', function() {
+$(window).on('scroll', function () {
   var cur_pos = $(this).scrollTop() + 200;
 
-  nav_sections.each(function() {
+  nav_sections.each(function () {
     var top = $(this).offset().top,
       bottom = top + $(this).outerHeight();
 
