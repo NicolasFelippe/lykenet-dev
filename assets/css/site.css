@@ -50,7 +50,7 @@ border-radius: 4rem;
 #header {
   transition: all 0.5s;
   z-index: 997;
-  padding: 26px 0;
+  padding: 7px 0;
   background: rgb(1, 26, 47 ,0.9);
 }
 
@@ -60,7 +60,7 @@ border-radius: 4rem;
 
 #header.header-scrolled {
   background: rgb(1, 26, 47 ,0.9);
-  padding: 18px 0;
+  padding: 0 0;
 }
 
 #header .logo {
@@ -544,6 +544,11 @@ font-size: 1.7rem!important;
   font-size: 1.9rem;
 }
 
+
+.teste-img{
+  width: 1920px;
+  height: 548px;
+}
 .contact .contact-info {
   margin-bottom: 20px;
   text-align: center;
