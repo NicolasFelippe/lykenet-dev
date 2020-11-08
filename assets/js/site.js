@@ -73,7 +73,7 @@ async function escolherCidade() {
   const { value: cidade } = await Swal.fire({
     title: 'Escolha a sua cidade',
     input: 'select',
-    imageUrl: '/assets/img/unidades/LYKENET_LOCALIZAÇÃO.png',
+    imageUrl: '../img/unidades/LYKENET_LOCALIZAÇÃO.png',
     background: 'f3f3f3',
     imageAlt: 'Custom image',
     customClass:{
