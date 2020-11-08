@@ -22,15 +22,32 @@
 </head>
 
 <body>
-  <header >
-    <div id="header" class="fixed-top header-transparent">
-    <div class="container-fluid">
+  <header  >
+    <div  class="fixed-top header-transparent">
+     
+      <div class="container-fluid infos">
+        <div class="row ">
+          <div class="col-xl-11 d-flex align-items-left justify-content-end">
+            <nav class="nav-menu menu-info d-none d-lg-block">
+              <ul>
+                <li><a href="#" class="hvr-underline-from-left link-info"><i class="fas fa-phone-alt"></i>0800 123 1234</a></li>
+                <li><a onclick="escolherCidade()" class="hvr-underline-from-left link-info"><i class="fas fa-map-marker-alt"></i>Cidade: <label class="cidadeEscolhida"> </label></a></li>
+                <li><a href="#" class="hvr-underline-from-left link-info"><i class="fas fa-file-contract"></i>Contrato</a></li>
+                <li><a href="https://www.speedtest.net/pt" class="hvr-underline-from-left link-info" target="_blank" ><i class="fas fa-wifi"></i>Teste Velocidade</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+
+    <div id="header" class="container-fluid">
       <div class="row justify-content-center">
         <div class="col-xl-11 d-flex align-items-center">
           <!-- <h1 class="logo mr-auto"><a href="index.html">LykeNet</a></h1> -->
           <a href="index.html" class="logo mr-auto"><img src="assets/img/logo_branco.png" alt="" class="img-fluid"></a>
 
-          <nav class="nav-menu d-none d-lg-block">
+          <nav class="nav-menu menu-top d-none d-lg-block">
             <ul>
               <li><a href="#planos" class="hvr-underline-from-left">Planos</a></li>
               <li><a href="#cobertura" class="hvr-underline-from-left">Cobertura</a></li>
@@ -38,28 +55,19 @@
               <li><a href="#team" class="hvr-underline-from-left">Quero ser Cliente</a></li>
               <li class="drop-down"><a href="">Suporte<i class="fas fa-angle-down"></i></a>
                 <ul>
-                  <li><a href="https://www.speedtest.net/pt" target="_blank" class="hvr-underline-from-left">Teste Velocidade</a></li>
                   <li><a href="https://webmail-seguro.com.br/lykenet.com.br/?_task=mail&_mbox=INBOX" target="_blank" class="hvr-underline-from-left">Acesso e-mail</a></li>
                 </ul>
               </li>
-
-            </ul>
-            <ul class="text-infos d-flex justify-content-center">
-              <li><a href="#" onclick="escolherCidade()"  >Trocar cidade <label id="cidadeEscolhida"></label></a></li>
-              <li><a href="#" >2º Via Fatura</a></li>
-              <li><a href="https://45.163.152.54/central_assinante_web/login" target="_blank" >Central do Assinante</a></li>
-              
-             
             </ul>
           </nav>
         </div>
       </div>
-
     </div>
+
   </div>
   </header>
 
-  <div style="background: rgb(1, 26, 47 ,0.9); height: 100px;"></div>
+  <div id="space" ></div>
   <!-- </header> -->
 
   <main role="main">
@@ -75,10 +83,10 @@
           <img src="assets/img/slides/slide1.jpg" class="teste-img" alt="Slide 1">
         </div>
         <div class="carousel-item">
-          <img src="assets/img/slides/slide2.jpg" class="teste-img" alt="Slide 2">
+          <img src="assets/img/slides/slide1.jpg" class="teste-img" alt="Slide 2">
         </div>
         <div class="carousel-item">
-          <img src="assets/img/slides/slide3.jpg" class="teste-img" alt="Slide 3">
+          <img src="assets/img/slides/slide1.jpg" class="teste-img" alt="Slide 3">
         </div>
 
       </div>
@@ -166,7 +174,7 @@
 
           <div class="col-md-4">
             <div class="contact-address">
-              <i class="fas fa-map-marker-alt"></i>
+              <img src="assets/img/unidades/LYKENET_LOCALIZAÇÃO.png" class="img-fluid" alt="icon localização">
               <h3>Endereço</h3>
               <address id="address"></address>
             </div>
@@ -174,7 +182,7 @@
 
           <div class="col-md-4">
             <div class="contact-phone">
-              <i class="fas fa-phone-alt"></i>
+              <img src="assets/img/unidades/LYKENET_TELEFONE.png" class="img-fluid" alt="icon telefone">
               <h3>Telefone</h3>
               <p><a id="tel">(99) 99999-9999</a></p>
             </div>
@@ -182,7 +190,7 @@
 
           <div class="col-md-4">
             <div class="contact-email">
-              <i class="fas fa-envelope"></i>
+              <img src="assets/img/unidades/LYKENET_EMAIL.png" class="img-fluid" alt="icon email">
               <h3>Email</h3>
               <p><a href="mailto:info@example.com">info@example.com</a></p>
             </div>
@@ -237,9 +245,10 @@
 
     <div class="row contact-info mt-5">
 
-      <div class="col-md-3">
-        <div class="contact-phone">
-          <i class="fas fa-map-marked-alt"></i>
+      <div class="col-md-3 contact-phone">
+        <div >
+          <!-- <i class="fas fa-map-marked-alt"></i> -->
+          <img src="assets/img/unidades/LYKENET_UNIDADES_LOGO.jpg" alt="">
           <h3>Matriz</h3>
           <h4><strong>Curitiba</strong></h4>
           <address>Rua Margarida de Andrade Weber, 601</address>
@@ -247,9 +256,9 @@
         </div>
       </div>
 
-      <div class="col-md-3">
-        <div class="contact-phone">
-          <i class="fas fa-map-marked-alt"></i>
+      <div class="col-md-3 contact-phone">
+        <div >
+          <img src="assets/img/unidades/LYKENET_UNIDADES_LOGO.jpg"  class="img-fluid" alt="">
           <h3>Unidade</h3>
           <h4><strong>Fazenda Rio Grande</strong></h4>
           <address>Rua Nossa Senhora Aparecida, 1425</address>
@@ -258,9 +267,9 @@
       </div>
 
 
-      <div class="col-md-3">
-        <div class="contact-phone">
-          <i class="fas fa-map-marked-alt"></i>
+      <div class="col-md-3 contact-phone">
+        <div >
+          <img src="assets/img/unidades/LYKENET_UNIDADES_LOGO.jpg"  class="img-fluid" alt="">
           <h3>Unidade</h3>
           <h4><strong>Araucária 1</strong></h4>
           <address>Rua Manoel Ribas, nº 1357, Cachoeira</address>
@@ -270,7 +279,7 @@
 
       <div class="col-md-3">
         <div class="contact-phone">
-          <i class="fas fa-map-marked-alt"></i>
+          <img src="assets/img/unidades/LYKENET_UNIDADES_LOGO.jpg" class="img-fluid" alt="">
           <h3>Unidade</h3>
           <h4><strong>Araucária 2</strong></h4>
           <address>Rua Uirapuru, nº 907, Capela Velha</address>

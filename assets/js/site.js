@@ -1,5 +1,5 @@
 LYKENET = new Object
-
+city = new Object
 $(document).ready(function () {
   
   // Activate smooth scroll on page load with hash links in the url
@@ -73,8 +73,11 @@ async function escolherCidade() {
   const { value: cidade } = await Swal.fire({
     title: 'Escolha a sua cidade',
     input: 'select',
-    icon:'question',
+    imageUrl: '/assets/img/unidades/LYKENET_LOCALIZAÇÃO.png',
+    background: 'f3f3f3',
+    imageAlt: 'Custom image',
     customClass:{
+      image: 'img-fluid',
       content:'swal-font',
       actions:'swal-font',
       confirmButton:'swal-btn',
@@ -102,7 +105,7 @@ async function escolherCidade() {
     }
   })
 
-  var city = new Object
+ 
   if (cidade === "Curitiba") {
     city.name = 'Curitiba'
     city.rua = 'Rua Margarida de Andrade Weber, 601 - CIC'
@@ -124,7 +127,7 @@ async function escolherCidade() {
     city.rua = 'Rua Uirapuru, nº 907, Capela Velha'
     city.tel = '(41) 4063 7444'
   }
-  $('#cidadeEscolhida').text(`: ${city.name}`);
+  $('.cidadeEscolhida').text(`${city.name}`);
   $('#cidadeContato').text(`${city.name}`);
   $('#address').text(`${city.rua}`);
   $('#tel').text(`${city.tel}`);
@@ -149,9 +152,14 @@ async function escolherCidade() {
 
 // Mobile Navigation
 if ($('.nav-menu').length) {
-  var $mobile_nav = $('.nav-menu').clone().prop({
-    class: 'mobile-nav d-lg-none'
+  var $mobile_nav = $('.menu-top').clone().prop({
+    class: 'mobile-nav d-lg-none margin-info'
   });
+  var $mobile_nav_info = $('.menu-info').clone().prop({
+    class: 'mobile-nav-info d-lg-none'
+  });
+  $('body').append($mobile_nav_info);
+  $('#cidadeEscolhida').html('asdasd')
   $('body').append($mobile_nav);
   $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="fas fa-bars"></i></button>');
   $('body').append('<div class="mobile-nav-overly"></div>');

@@ -39,9 +39,7 @@ body::-webkit-scrollbar-thumb {
 background-color: darkgrey;   
 border-radius: 4rem;
 }
-.text-infos a {
-  font-size: 1.2rem!important;
-}
+
 
 
 /*--------------------------------------------------------------
@@ -60,7 +58,7 @@ border-radius: 4rem;
 
 #header.header-scrolled {
   background: rgb(1, 26, 47 ,0.9);
-  padding: 8px 0;
+  padding: 20px 0;
 }
 
 #header .logo {
@@ -71,7 +69,6 @@ border-radius: 4rem;
   font-weight: 700;
   letter-spacing: 3px;
   padding-left: 10px;
-  border-left: 4px solid #18d26e;
 }
 
 #header .logo a {
@@ -86,6 +83,26 @@ border-radius: 4rem;
   #header .logo {
     font-size: 28px;
   }
+  #space{
+    margin: 0!important;
+  }
+}
+
+.infos{
+  background-color: #f4f4f4;
+}
+a.hvr-underline-from-left.link-info i {
+  margin-right: .4rem;
+}
+.link-info{
+  color:#3b524f!important;
+  font-size: 1.3rem!important;
+}
+
+#space{
+  background: rgb(1, 26, 47 );
+  height: 100px;
+  margin-top: 3.9rem;
 }
 
 /*--------------------------------------------------------------
@@ -203,7 +220,7 @@ i.fas.fa-angle-down {
 .mobile-nav-toggle {
   position: fixed;
   right: 15px;
-  top: 3rem;
+  top: 3.5rem;
   z-index: 9998;
   border: 0;
   background: none;
@@ -221,7 +238,7 @@ i.fas.fa-angle-down {
 
 .mobile-nav {
   position: fixed;
-  top: 55px;
+  top: 27rem;
   right: 15px;
   bottom: 15px;
   left: 15px;
@@ -235,13 +252,28 @@ i.fas.fa-angle-down {
   padding: 10px 0;
 }
 
-.mobile-nav * {
+.mobile-nav-info {
+  position: fixed;
+  top: 9rem;
+  right: 15px;
+  left: 15px;
+  z-index: 9999;
+  overflow-y: auto;
+  background: #fff;
+  transition: ease-in-out 0.2s;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+.mobile-nav *, .mobile-nav-info * {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.mobile-nav a {
+.mobile-nav a, .mobile-nav-info a {
   display: block;
   position: relative;
   font-size: 2rem;
@@ -298,7 +330,7 @@ i.fas.fa-angle-down {
   overflow: hidden;
 }
 
-.mobile-nav-active .mobile-nav {
+.mobile-nav-active .mobile-nav , .mobile-nav-active .mobile-nav-info  {
   opacity: 1;
   visibility: visible;
 }
@@ -521,20 +553,21 @@ i.fas.fa-angle-down {
 
 
 .swal2-content{
-font-size: 1.7rem!important;
+font-size: 2rem!important;
 }
 .swal-font{
-  font-size: 1.7rem!important;
+  font-size: 2rem!important;
 }
 .swal-btn{
   background-color: #18d26e!important;
+  padding: 1.8rem!important;
+  font-weight: 700!important;
+  
 }
 .swal2-select{
-  font-size: 1.7rem!important;
+  font-size: 1.9rem!important;
 }
-.swal-pop{
-  background-color: #f3f3f3;
-}
+
 /* Contact Section
 --------------------------------*/
 .contact {
@@ -558,9 +591,14 @@ font-size: 1.7rem!important;
   font-size: 5rem;
   color: #18d26e;
 }
+#cobertura address, #cobertura p{
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  color: #000;
+}
 
 .contact .contact-info address, .contact .contact-info p {
-  font-size: 1.4rem;
+  font-size: 2rem;
   margin-bottom: 0;
   color: #000;
 }
