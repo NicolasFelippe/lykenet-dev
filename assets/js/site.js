@@ -12,22 +12,24 @@ $(document).ready(function () {
       }, 1500, 'easeInOutExpo');
     }
   }
-//  escolherCidade()
+  escolherCidade()
 })
 
-  // Intro carousel
-  var introCarousel = $(".carousel");
-  var introCarouselIndicators = $(".carousel-indicators");
-  introCarousel.find(".carousel-inner").children(".carousel-item").each(function(index) {
-    (index === 0) ?
-    introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "' class='active'></li>"):
-      introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "'></li>");
-  });
-  
-  introCarousel.on('slid.bs.carousel', function(e) {
-    $(this).find('h2').addClass('animate__animated animate__fadeInDown');
-    $(this).find('p, .btn-get-started').addClass('animate__animated animate__fadeInUp');
-  });
+// Intro carousel
+var introCarousel = $(".carousel");
+var introCarouselIndicators = $(".carousel-indicators");
+introCarousel.find(".carousel-inner").children(".carousel-item").each(function (index) {
+  (index === 0) ?
+    introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "' class='active'></li>") :
+    introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "'></li>");
+});
+
+introCarousel.on('slid.bs.carousel', function (e) {
+  $(this).find('h2').addClass('animate__animated animate__fadeInDown');
+  $(this).find('p, .btn-get-started').addClass('animate__animated animate__fadeInUp');
+});
+
+
 // Back to top button
 $(window).scroll(function () {
   if ($(this).scrollTop() > 100) {
@@ -76,10 +78,6 @@ $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function (e) {
   }
 });
 
-
-
-
-
 async function escolherCidade() {
 
   const { value: cidade } = await Swal.fire({
@@ -88,19 +86,19 @@ async function escolherCidade() {
     imageUrl: '/lykenet-dev/assets/img/unidades/LYKENET_LOCALIZACAO.png',
     background: 'f3f3f3',
     imageAlt: 'Custom image',
-    customClass:{
+    customClass: {
       image: 'img-fluid',
-      content:'swal-font',
-      actions:'swal-font',
-      confirmButton:'swal-btn',
-      popup:'swal-pop'
+      content: 'swal-font',
+      actions: 'swal-font',
+      confirmButton: 'swal-btn',
+      popup: 'swal-pop'
     },
-    inputPlaceholder:'Escolha a Cidade',
+    inputPlaceholder: 'Escolha a Cidade',
     inputOptions: {
-        Curitiba: 'Curitiba',
-        FazendaRioGrande: 'Fazenda Rio Grande',
-        Araucaria1: 'Araucária (Cachoeira)',
-        Araucaria2: 'Araucária (Capela Velha)',
+      Curitiba: 'Curitiba',
+      FazendaRioGrande: 'Fazenda Rio Grande',
+      Araucaria1: 'Araucária (Cachoeira)',
+      Araucaria2: 'Araucária (Capela Velha)',
     },
     showCancelButton: false,
     allowOutsideClick: false,
@@ -113,7 +111,7 @@ async function escolherCidade() {
     }
   })
 
- 
+
   if (cidade === "Curitiba") {
     city.name = 'Curitiba'
     city.rua = 'Rua Margarida de Andrade Weber, 601 - CIC'
@@ -198,7 +196,7 @@ if ($('.nav-menu').length) {
   $(".mobile-nav, .mobile-nav-toggle").hide();
 }
 
- 
+
 
 // Header scroll class
 $(window).scroll(function () {
