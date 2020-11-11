@@ -1,7 +1,7 @@
 LYKENET = new Object
 city = new Object
 $(document).ready(function () {
-  
+
   // Activate smooth scroll on page load with hash links in the url
   if (window.location.hash) {
     var initial_nav = window.location.hash;
@@ -12,10 +12,22 @@ $(document).ready(function () {
       }, 1500, 'easeInOutExpo');
     }
   }
- escolherCidade()
+//  escolherCidade()
 })
 
-
+  // Intro carousel
+  var introCarousel = $(".carousel");
+  var introCarouselIndicators = $(".carousel-indicators");
+  introCarousel.find(".carousel-inner").children(".carousel-item").each(function(index) {
+    (index === 0) ?
+    introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "' class='active'></li>"):
+      introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "'></li>");
+  });
+  
+  introCarousel.on('slid.bs.carousel', function(e) {
+    $(this).find('h2').addClass('animate__animated animate__fadeInDown');
+    $(this).find('p, .btn-get-started').addClass('animate__animated animate__fadeInUp');
+  });
 // Back to top button
 $(window).scroll(function () {
   if ($(this).scrollTop() > 100) {
@@ -85,14 +97,10 @@ async function escolherCidade() {
     },
     inputPlaceholder:'Escolha a Cidade',
     inputOptions: {
-      'Matriz': {
         Curitiba: 'Curitiba',
-      },
-      'Unidades': {
         FazendaRioGrande: 'Fazenda Rio Grande',
-        Araucaria1: 'Araucária 1',
-        Araucaria2: 'Araucária 2'
-      },
+        Araucaria1: 'Araucária (Cachoeira)',
+        Araucaria2: 'Araucária (Capela Velha)',
     },
     showCancelButton: false,
     allowOutsideClick: false,
@@ -118,12 +126,12 @@ async function escolherCidade() {
   }
 
   if (cidade === 'Araucaria1') {
-    city.name = 'Araucária 1'
+    city.name = 'Araucária'
     city.rua = 'Rua Manoel Ribas, nº 1357, Cachoeira'
     city.tel = '(41) 4063 7444'
   }
   if (cidade === 'Araucaria2') {
-    city.name = 'Araucária 2'
+    city.name = 'Araucária'
     city.rua = 'Rua Uirapuru, nº 907, Capela Velha'
     city.tel = '(41) 4063 7444'
   }
@@ -189,6 +197,8 @@ if ($('.nav-menu').length) {
 } else if ($(".mobile-nav, .mobile-nav-toggle").length) {
   $(".mobile-nav, .mobile-nav-toggle").hide();
 }
+
+ 
 
 // Header scroll class
 $(window).scroll(function () {

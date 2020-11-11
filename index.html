@@ -14,6 +14,8 @@
   <!-- Icons -->
   <script src="https://kit.fontawesome.com/410d87359f.js" crossorigin="anonymous"></script>
 
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/site.css">
@@ -27,13 +29,13 @@
      
       <div class="container-fluid infos">
         <div class="row ">
-          <div class="col-xl-11 d-flex align-items-left justify-content-end">
+          <div class="col-xl-12 d-flex align-items-left justify-content-end">
             <nav class="nav-menu menu-info d-none d-lg-block">
               <ul>
-                <li><a href="#" class="hvr-underline-from-left link-info"><i class="fas fa-phone-alt"></i>0800 123 1234</a></li>
-                <li><a onclick="escolherCidade()" class="hvr-underline-from-left link-info"><i class="fas fa-map-marker-alt"></i>Cidade: <label class="cidadeEscolhida"> </label></a></li>
-                <li><a href="#" class="hvr-underline-from-left link-info"><i class="fas fa-file-contract"></i>Contrato</a></li>
-                <li><a href="https://www.speedtest.net/pt" class="hvr-underline-from-left link-info" target="_blank" ><i class="fas fa-wifi"></i>Teste Velocidade</a></li>
+                <li><a href="#" class="link-info"><i class="fas fa-phone-alt"></i>0800 580 4103</a></li>
+                <li><a onclick="escolherCidade()" class="link-info"><i class="fas fa-map-marker-alt"></i>Cidade: <label class="cidadeEscolhida"> </label></a></li>
+                <li><a href="#" class="link-info"><i class="fas fa-file-contract"></i>Contrato</a></li>
+                <li><a href="https://www.speedtest.net/pt" class="link-info" target="_blank" ><i class="fas fa-wifi"></i>Teste Velocidade</a></li>
               </ul>
             </nav>
           </div>
@@ -49,10 +51,12 @@
 
           <nav class="nav-menu menu-top d-none d-lg-block">
             <ul>
+              <li><a href="#about" class="hvr-underline-from-left">Sobre nós</a></li>
               <li><a href="#planos" class="hvr-underline-from-left">Planos</a></li>
               <li><a href="#cobertura" class="hvr-underline-from-left">Cobertura</a></li>
               <li><a href="#contact" class="hvr-underline-from-left">Contato</a></li>
               <li><a href="#team" class="hvr-underline-from-left">Quero ser Cliente</a></li>
+              <li><a href="https://45.163.152.54/central_assinante_web/login" target="_blank" class="hvr-underline-from-left">Área do assinante</a></li>
               <li class="drop-down"><a href="">Suporte<i class="fas fa-angle-down"></i></a>
                 <ul>
                   <li><a href="https://webmail-seguro.com.br/lykenet.com.br/?_task=mail&_mbox=INBOX" target="_blank" class="hvr-underline-from-left">Acesso e-mail</a></li>
@@ -69,36 +73,115 @@
 
   <div id="space" ></div>
   <!-- </header> -->
+  <section id="intro">
+    <div class="intro-container">
+      <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
 
+        <ol class="carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <div class="carousel-item active" style="background-image: url(assets/img/slides/slide1.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">Plano 1</h2>
+                <p class="animate__animated animate__fadeInUp">Plano 1 o melhor...</p>
+                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Assinar já</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url(assets/img/slides/slide2.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">Plano 2</h2>
+                <p class="animate__animated animate__fadeInUp">Plano 2 o melhor...</p>
+                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Assinar já</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url(assets/img/slides/slide3.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">Plano 3</h2>
+                <p class="animate__animated animate__fadeInUp">Plano 3 o melhor...</p>
+                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Assinar já</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+      </div>
+    </div>
+  </section><!-- End Intro Section -->
   <main role="main">
+  
+    <section id="about">
+      <div class="container" data-aos="fade-up">
 
-    <div id="slide-top" class="carousel slide carousel-fade" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#slide-top" data-slide-to="0" class="active"></li>
-        <li data-target="#slide-top" data-slide-to="1"></li>
-        <li data-target="#slide-top" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="assets/img/slides/slide1.jpg" class="img-fluid" alt="Slide 1">
-        </div>
-        <div class="carousel-item">
-          <img src="assets/img/slides/slide1.jpg" class="img-fluid" alt="Slide 2">
-        </div>
-        <div class="carousel-item">
-          <img src="assets/img/slides/slide1.jpg" class="img-fluid" alt="Slide 3">
+        <header class="section-header">
+          <h3>Sobre nós</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </header>
+
+        <div class="row about-cols">
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="about-col">
+              <div class="img">
+                <img src="assets/img/about-mission.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="fas fa-check-circle"></i></div>
+              </div>
+              <h2 class="title">Nossa Missão</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="about-col">
+              <div class="img">
+                <img src="assets/img/about-plan.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="fas fa-clipboard-list"></i></div>
+              </div>
+              <h2 class="title">Nosso Plano</h2>
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="about-col">
+              <div class="img">
+                <img src="assets/img/about-vision.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="fas fa-eye"></i></div>
+              </div>
+              <h2 class="title">Nossa Visão</h2>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+              </p>
+            </div>
+          </div>
+
         </div>
 
       </div>
-      <a class="carousel-control-prev" href="#slide-top" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#slide-top" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
+    </section><!-- End About Us Section -->
+
+
     <section id="planos">
       <div class="container" data-aos="fade-up">
 
@@ -106,11 +189,9 @@
           <h3 class="section-title">Temos o plano ideal para você</h3>
         </header>
 
-
         <div class="container mt-5 container-planos ">
 
           <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
 
             <!-- Three columns of text below the carousel -->
 
@@ -151,92 +232,15 @@
                 <img class="img-fluid img-plano lozad" data-src="assets/img/cards_planos/PLANOS6.png" />
               </div>
             </div>
-
-
-
           </div>
-
         </div>
-
       </div>
     </section>
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="section-bg contact">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h3>Contate-Nos</h3>
-          <p  id="cidadeContato"></p>
-        </div>
-
-        <div class="row contact-info">
-
-          <div class="col-md-4">
-            <div class="contact-address">
-              <img src="assets/img/unidades/LYKENET_LOCALIZACAO.png" class="img-fluid" alt="icon LOCALIZACAO">
-              <h3>Endereço</h3>
-              <address id="address"></address>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="contact-phone">
-              <img src="assets/img/unidades/LYKENET_TELEFONE.png" class="img-fluid" alt="icon telefone">
-              <h3>Telefone</h3>
-              <p><a id="tel">(99) 99999-9999</a></p>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="contact-email">
-              <img src="assets/img/unidades/LYKENET_EMAIL.png" class="img-fluid" alt="icon email">
-              <h3>Email</h3>
-              <p><a href="mailto:info@example.com">info@example.com</a></p>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="form">
-          <form action="/forms/contact.php" method="post" role="form" class="php-email-form">
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Seu Nome"
-                  data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validate"></div>
-              </div>
-              <div class="form-group col-md-6">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Seu Email"
-                  data-rule="email" data-msg="Please enter a valid email" />
-                <div class="validate"></div>
-              </div>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Título"
-                data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-              <div class="validate"></div>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" name="message" rows="5" data-rule="required"
-                data-msg="Please write something for us" placeholder="Mensagem"></textarea>
-              <div class="validate"></div>
-            </div>
-            <div class="mb-3">
-              <div class="loading">Carregando...</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Sua mensagem foi enviada. Obrigado!</div>
-            </div>
-            <div class="text-center"><button type="submit" id="btn-enviar-email">Enviar<i
-                  class="fas fa-paper-plane"></i></button></div>
-          </form>
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
+   
 
  <!-- ======= Onde Estamos Section ======= -->
- <section id="cobertura" class="contact">
+ <section id="cobertura" class="section-bg contact">
   <div class="container" data-aos="fade-up">
 
     <div class="section-header">
@@ -248,7 +252,7 @@
       <div class="col-md-3 contact-phone">
         <div >
           <!-- <i class="fas fa-map-marked-alt"></i> -->
-          <img src="assets/img/unidades/LYKENET_UNIDADES_LOGO.jpg" alt="">
+          <img src="assets/img/unidades/LYKENET_LOCALIZACAO.png" alt="">
           <h3>Matriz</h3>
           <h4><strong>Curitiba</strong></h4>
           <address>Rua Margarida de Andrade Weber, 601</address>
@@ -258,7 +262,7 @@
 
       <div class="col-md-3 contact-phone">
         <div >
-          <img src="assets/img/unidades/LYKENET_UNIDADES_LOGO.jpg"  class="img-fluid" alt="">
+          <img src="assets/img/unidades/LYKENET_LOCALIZACAO.png"  class="img-fluid" alt="">
           <h3>Unidade</h3>
           <h4><strong>Fazenda Rio Grande</strong></h4>
           <address>Rua Nossa Senhora Aparecida, 1425</address>
@@ -269,9 +273,9 @@
 
       <div class="col-md-3 contact-phone">
         <div >
-          <img src="assets/img/unidades/LYKENET_UNIDADES_LOGO.jpg"  class="img-fluid" alt="">
+          <img src="assets/img/unidades/LYKENET_LOCALIZACAO.png"  class="img-fluid" alt="">
           <h3>Unidade</h3>
-          <h4><strong>Araucária 1</strong></h4>
+          <h4><strong>Araucária</strong></h4>
           <address>Rua Manoel Ribas, nº 1357, Cachoeira</address>
           <p>(41) 4063 7444</p>
         </div>
@@ -279,9 +283,9 @@
 
       <div class="col-md-3">
         <div class="contact-phone">
-          <img src="assets/img/unidades/LYKENET_UNIDADES_LOGO.jpg" class="img-fluid" alt="">
+          <img src="assets/img/unidades/LYKENET_LOCALIZACAO.png" class="img-fluid" alt="">
           <h3>Unidade</h3>
-          <h4><strong>Araucária 2</strong></h4>
+          <h4><strong>Araucária</strong></h4>
           <address>Rua Uirapuru, nº 907, Capela Velha</address>
           <p>(41) 4063 7444</p>
         </div>
@@ -293,7 +297,79 @@
 
   </div>
 </section><!-- End Contact Section -->
+ <!-- ======= Contact Section ======= -->
+ <section id="contact" class="contact">
+  <div class="container" data-aos="fade-up">
 
+    <div class="section-header">
+      <h3>Contate-Nos</h3>
+      <p  id="cidadeContato"></p>
+    </div>
+
+    <div class="row contact-info">
+
+      <div class="col-md-4">
+        <div class="contact-address">
+          <img src="assets/img/unidades/LYKENET_LOCALIZACAO.png" class="img-fluid" alt="icon LOCALIZACAO">
+          <h3>Endereço</h3>
+          <address id="address"></address>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="contact-phone">
+          <img src="assets/img/unidades/LYKENET_TELEFONE.png" class="img-fluid" alt="icon telefone">
+          <h3>Telefone</h3>
+          <p><a id="tel">(99) 99999-9999</a></p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="contact-email">
+          <img src="assets/img/unidades/LYKENET_EMAIL.png" class="img-fluid" alt="icon email">
+          <h3>Email</h3>
+          <p><a href="mailto:info@example.com">info@example.com</a></p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="form">
+      <form   role="form" class="php-email-form">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Seu Nome"
+              data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+            <div class="validate"></div>
+          </div>
+          <div class="form-group col-md-6">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Seu Email"
+              data-rule="email" data-msg="Please enter a valid email" />
+            <div class="validate"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="subject" id="subject" placeholder="Título"
+            data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+          <div class="validate"></div>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" name="message" rows="5" data-rule="required"
+            data-msg="Please write something for us" placeholder="Mensagem"></textarea>
+          <div class="validate"></div>
+        </div>
+        <div class="mb-3">
+          <div class="loading">Carregando...</div>
+          <div class="error-message"></div>
+          <div class="sent-message">Sua mensagem foi enviada. Obrigado!</div>
+        </div>
+        <div class="text-center"><button type="submit" id="btn-enviar-email">Enviar<i
+              class="fas fa-paper-plane"></i></button></div>
+      </form>
+    </div>
+
+  </div>
+</section><!-- End Contact Section -->
   </main>
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -368,6 +444,7 @@
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script>
     function aos_init() {
       AOS.init({
