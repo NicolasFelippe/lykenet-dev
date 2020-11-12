@@ -1,5 +1,6 @@
 LYKENET = new Object
 city = new Object
+$telefone = 0
 $(document).ready(function () {
 
   // Activate smooth scroll on page load with hash links in the url
@@ -78,6 +79,11 @@ $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function (e) {
   }
 });
 
+function abrirWhats(textPlano){
+  console.log($telefone.trim())
+  window.open(`https://api.whatsapp.com/send?phone=${$telefone.trim()}&text=${textPlano}`);
+}
+
 async function escolherCidade() {
 
   const { value: cidade } = await Swal.fire({
@@ -133,10 +139,13 @@ async function escolherCidade() {
     city.rua = 'Rua Uirapuru, nº 907, Capela Velha'
     city.tel = '(41) 4063 7444'
   }
+  $telefone= city.tel.replace("(","").replace(")","").replace(/( )+/g, '')
+
   $('.cidadeEscolhida').text(`${city.name}`);
   $('#cidadeContato').text(`${city.name}`);
   $('#address').text(`${city.rua}`);
   $('#tel').text(`${city.tel}`);
+
 
   // $.ajax({
   //     url: `https://viacep.com.br/ws/${cep}/json/?callback=`,
