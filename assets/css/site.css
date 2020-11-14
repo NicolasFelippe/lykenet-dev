@@ -166,10 +166,21 @@ a.link-info i {
   font-size: 5rem;
   font-weight: 700;
 }
-
+#intro h1 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 10rem;
+  font-weight: 700;
+}
 @media (max-width: 768px) {
   #intro h2 {
     font-size: 28px;
+  }
+  #intro h1{
+    font-size: 5rem;
+  }
+  #intro {
+    height: 60vh;
   }
 }
 

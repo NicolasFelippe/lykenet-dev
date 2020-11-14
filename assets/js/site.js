@@ -81,7 +81,7 @@ $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function (e) {
 
 function abrirWhats(textPlano){
   console.log($telefone.trim())
-  window.open(`https://api.whatsapp.com/send?phone=${$telefone.trim()}&text=${textPlano}`);
+  window.open(`https://api.whatsapp.com/send?phone=55${$telefone}&text=${textPlano}`);
 }
 
 async function escolherCidade() {
