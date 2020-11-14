@@ -174,20 +174,26 @@ a.link-info i {
 }
 @media (max-width: 768px) {
   #intro h2 {
-    font-size: 28px;
+    font-size: 2.5rem;
   }
   #intro h1{
-    font-size: 5rem;
+    font-size: 3.5rem;
+  }
+  #intro p {
+    font-size: 2rem!important;
   }
   #intro {
-    height: 60vh;
+    height: 65vh;
+  }
+  #intro .carousel-container{
+    bottom:80px;
   }
 }
 
 #intro p {
   font-size: 3rem;
   width: 80%;
-  margin: 0 auto 30px auto;
+  margin: 0 auto;
   color: #fff;
 }
 
@@ -250,7 +256,7 @@ a.link-info i {
   font-size: 16px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 8px 32px;
+  padding: 1rem ;
   border-radius: 50px;
   transition: 0.5s;
   margin: 10px;
