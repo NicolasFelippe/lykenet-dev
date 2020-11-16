@@ -284,7 +284,7 @@ a.link-info i {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.7);
   
 }
 #about {
@@ -294,7 +294,7 @@ a.link-info i {
   position: relative;
 }
 .about p{
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 #about::before {
@@ -304,7 +304,7 @@ a.link-info i {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.6);
   z-index: 9;
 }
 
@@ -376,7 +376,6 @@ a.link-info i {
 }
 
 .about .about-col p {
-  font-size: 14px;
   line-height: 24px;
   color: #333;
   margin-bottom: 0;
