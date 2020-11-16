@@ -736,6 +736,15 @@ i.fas.fa-angle-down {
   }
 
 
+#btn-dispo{
+  background: #18d26e;
+  border: 0;
+  padding: 10px 30px;
+  color: #fff;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
   /* footer */
 
  footer{
@@ -879,7 +888,7 @@ font-size: 2rem!important;
   margin-bottom: 0;
   color: #000;
 }
-#btn-enviar-email{
+#btn-enviar-email, #btn-dispo{
   font-size: 2rem;
 }
 #btn-enviar-email i{
