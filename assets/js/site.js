@@ -181,9 +181,6 @@ async function escolherCidade() {
     city.whats= '(41) 3246 4142'
     city.tel = '(41) 3514 4999'
   }
-
-
-
   if (cidade === 'Araucaria1') {
     city.localizacao = 'Araucária Matriz'
     city.name = 'Araucária Matriz'
