@@ -104,6 +104,7 @@ async function escolherCidade() {
       FazendaRioGrande: 'Fazenda Rio Grande',
       Araucaria1: 'Araucária (Cachoeira)',
       Araucaria2: 'Araucária (Capela Velha)',
+      AraucariaRural: 'Araucária Rural',
       Curitiba: 'Curitiba',
       'Bairros': {
       Pinheirinho: 'Pinheirinho',
@@ -128,7 +129,8 @@ async function escolherCidade() {
   || cidade === "CidadeIndustrialCuritiba"
   || cidade === "Tatuaquara"
   || cidade === "CampoSantana"
-  || cidade === "CapaoRaso") {
+  || cidade === "CapaoRaso"
+  || cidade === "AraucariaRural") {
     city.name = 'Curitiba'
     city.rua = 'Rua Margarida de Andrade Weber, 601 - CIC'
     city.tel = '(41) 3246 4142'
