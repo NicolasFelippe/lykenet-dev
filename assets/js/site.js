@@ -87,7 +87,7 @@ function abrirWhats(textPlano){
 async function escolherCidade() {
 
   const { value: cidade } = await Swal.fire({
-    title: 'Escolha a sua cidade',
+    title: 'Escolha a sua localização',
     input: 'select',
     imageUrl: '/lykenet-dev/assets/img/unidades/LYKENET_LOCALIZACAO.png',
     background: 'f3f3f3',
@@ -99,12 +99,18 @@ async function escolherCidade() {
       confirmButton: 'swal-btn',
       popup: 'swal-pop'
     },
-    inputPlaceholder: 'Escolha a Cidade',
+    inputPlaceholder: 'Selecione',
     inputOptions: {
-      Curitiba: 'Curitiba',
       FazendaRioGrande: 'Fazenda Rio Grande',
       Araucaria1: 'Araucária (Cachoeira)',
       Araucaria2: 'Araucária (Capela Velha)',
+      Curitiba: 'Curitiba',
+      'Bairros': {
+      Pinheirinho: 'Pinheirinho',
+      CidadeIndustrialCuritiba: 'Cidade Industrial Curitiba',
+      Tatuaquara: 'Tatuaquara',
+      CampoSantana: 'Campo de Santana',
+      CapaoRaso: 'Capão Raso',}
     },
     showCancelButton: false,
     allowOutsideClick: false,
@@ -118,7 +124,12 @@ async function escolherCidade() {
   })
 
 
-  if (cidade === "Curitiba") {
+  if (cidade === "Curitiba" 
+  || cidade === "Pinheirinho"
+  || cidade === "CidadeIndustrialCuritiba"
+  || cidade === "Tatuaquara"
+  || cidade === "CampoSantana"
+  || cidade === "CapaoRaso") {
     city.name = 'Curitiba'
     city.rua = 'Rua Margarida de Andrade Weber, 601 - CIC'
     city.tel = '(41) 3246 4142'
