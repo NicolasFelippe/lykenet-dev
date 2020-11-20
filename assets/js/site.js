@@ -1,6 +1,6 @@
 LYKENET = new Object
 city = new Object
-$telefone = 0
+$whats = 0
 $(document).ready(function () {
 
   // Activate smooth scroll on page load with hash links in the url
@@ -80,8 +80,7 @@ $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function (e) {
 });
 
 function abrirWhats(textPlano){
-  console.log($telefone.trim())
-  window.open(`https://api.whatsapp.com/send?phone=55${$telefone}&text=${textPlano}`);
+  window.open(`https://api.whatsapp.com/send?phone=55${$whats}&text=${textPlano}`);
 }
 
 async function escolherCidade() {
@@ -123,39 +122,85 @@ async function escolherCidade() {
       }
     }
   })
-
-
-  if (cidade === "Curitiba" 
-  || cidade === "CidadeIndustrialCuritiba"
-  || cidade === "Tatuaquara"
-  || cidade === "CampoSantana"
-  || cidade === "CapaoRaso"
-  || cidade === "AraucariaRural") {
+  if(cidade === "Curitiba" ){
+    city.localizacao = 'Curitiba'
     city.name = 'Curitiba'
     city.rua = 'Rua Margarida de Andrade Weber, 601 - CIC'
+    city.whats= '(41) 3246 4142'
     city.tel = '(41) 3246 4142'
   }
-  if (cidade === 'FazendaRioGrande') {
-    city.name = 'Fazenda Rio Grande'
-    city.rua = 'Rua Nossa Senhora Aparecida ,1425'
+
+  if(cidade === "Pinheirinho" ){
+    city.localizacao = 'Pinheirinho'
+    city.name = 'Araucária'
+    city.rua = 'Rua Manoel Ribas, nº 1357, Cachoeira'
+    city.whats = '(41) 4063 7444'
+    city.tel = '(41) 4063 7444'
+  }
+  if(cidade === "CidadeIndustrialCuritiba" ){
+    city.localizacao = 'Cidade Industrial Curitiba'
+    city.name = 'Curitiba'
+    city.rua = 'Rua Margarida de Andrade Weber, 601 - CIC'
+    city.whats= '(41) 3246 4142'
+    city.tel = '(41) 3246 4142'
+  }
+  if(cidade === "Tatuaquara" ){
+    city.localizacao = 'Tatuaquara'
+    city.name = 'Curitiba'
+    city.rua = 'Rua Margarida de Andrade Weber, 601 - CIC'
+    city.whats= '(41) 3246 4142'
+    city.tel = '(41) 3246 4142'
+  }
+  if(cidade === "Campo de Santana" ){
+    city.localizacao = 'Campo de Santana'
+    city.name = 'Curitiba'
+    city.rua = 'Rua Margarida de Andrade Weber, 601 - CIC'
+    city.whats= '(41) 3246 4142'
+    city.tel = '(41) 3246 4142'
+  }
+  if(cidade === "CapaoRaso" ){
+    city.localizacao = 'Capão Raso'
+    city.name = 'Curitiba'
+    city.rua = 'Rua Margarida de Andrade Weber, 601 - CIC'
+    city.whats= '(41) 3246 4142'
+    city.tel = '(41) 3246 4142'
+  }
+
+  if(cidade === "AraucariaRural" ){
+    city.localizacao = 'Araucária Rural'
+    city.name = 'Curitiba'
+    city.rua = 'Rua Margarida de Andrade Weber, 601 - CIC'
+    city.whats= '(41) 3246 4142'
     city.tel = '(41) 3514 4999'
   }
 
-  if (cidade === 'Araucaria1'
-  || cidade === "Pinheirinho") {
-    city.name = 'Araucária'
-    city.rua = 'Rua Manoel Ribas, nº 1357, Cachoeira'
-    city.tel = '(41) 4063 7444'
+  if (cidade === 'FazendaRioGrande') {
+    city.localizacao = 'Fazenda Rio Grande'
+    city.name = 'Fazenda Rio Grande'
+    city.rua = 'Rua Nossa Senhora Aparecida ,1425'
+    city.whats= '(41) 3246 4142'
+    city.tel = '(41) 3514 4999'
   }
-  if (cidade === 'Araucaria2'
-  || cidade === "Pinheirinho") {
-    city.name = 'Araucária'
-    city.rua = 'Rua Uirapuru, nº 907, Capela Velha'
-    city.tel = '(41) 4063 7444'
-  }
-  $telefone= city.tel.replace("(","").replace(")","").replace(/( )+/g, '')
 
-  $('.cidadeEscolhida').text(`${city.name}`);
+
+
+  if (cidade === 'Araucaria1') {
+    city.localizacao = 'Araucária Matriz'
+    city.name = 'Araucária Matriz'
+    city.rua = 'Rua Manoel Ribas, nº 1357, Cachoeira'
+    city.whats= '(41) 4063 7444'
+    city.tel = '(41) 4063 7444'
+  }
+  if (cidade === 'Araucaria2') {
+    city.localizacao = 'Araucária Filial'
+    city.name = 'Araucária Filial'
+    city.rua = 'Rua Uirapuru, nº 907, Capela Velha'
+    city.whats= '(41) 4063 7444'
+    city.tel = '(41) 4063 7444'
+  }
+  $whats= city.whats.replace("(","").replace(")","").replace(/( )+/g, '')
+
+  $('.cidadeEscolhida').text(`${city.localizacao}`);
   $('#cidadeContato').text(`${city.name}`);
   $('#address').text(`${city.rua}`);
   $('#tel').text(`${city.tel}`);
