@@ -125,7 +125,6 @@ async function escolherCidade() {
 
 
   if (cidade === "Curitiba" 
-  || cidade === "Pinheirinho"
   || cidade === "CidadeIndustrialCuritiba"
   || cidade === "Tatuaquara"
   || cidade === "CampoSantana"
@@ -140,12 +139,14 @@ async function escolherCidade() {
     city.tel = '(41) 3514 4999'
   }
 
-  if (cidade === 'Araucaria1') {
+  if (cidade === 'Araucaria1'
+  || cidade === "Pinheirinho") {
     city.name = 'Araucária'
     city.rua = 'Rua Manoel Ribas, nº 1357, Cachoeira'
     city.tel = '(41) 4063 7444'
   }
-  if (cidade === 'Araucaria2') {
+  if (cidade === 'Araucaria2'
+  || cidade === "Pinheirinho") {
     city.name = 'Araucária'
     city.rua = 'Rua Uirapuru, nº 907, Capela Velha'
     city.tel = '(41) 4063 7444'
