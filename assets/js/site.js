@@ -79,6 +79,14 @@ $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function (e) {
   }
 });
 
+function sendEmail () {
+  Swal.fire(
+    'Email enviado!',
+    '',
+    'success'
+  )
+}
+
 function abrirWhats(textPlano){
   window.open(`https://api.whatsapp.com/send?phone=5508005804103&text=${textPlano}`);
 }
