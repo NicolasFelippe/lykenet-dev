@@ -1,6 +1,6 @@
 LYKENET = new Object
 city = new Object
-$whats = 0
+$whats = '0800 580 4103'
 $(document).ready(function () {
 
   // Activate smooth scroll on page load with hash links in the url
@@ -80,7 +80,7 @@ $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function (e) {
 });
 
 function abrirWhats(textPlano){
-  window.open(`https://api.whatsapp.com/send?phone=55${$whats}&text=${textPlano}`);
+  window.open(`https://api.whatsapp.com/send?phone=5508005804103&text=${textPlano}`);
 }
 
 async function escolherCidade() {
@@ -107,10 +107,9 @@ async function escolherCidade() {
       Curitiba: 'Curitiba',
       'Bairros': {
       Pinheirinho: 'Pinheirinho',
-      CidadeIndustrialCuritiba: 'Cidade Industrial Curitiba',
       Tatuaquara: 'Tatuaquara',
       CampoSantana: 'Campo de Santana',
-      CapaoRaso: 'Capão Raso',}
+    }
     },
     showCancelButton: false,
     allowOutsideClick: false,
@@ -128,6 +127,7 @@ async function escolherCidade() {
     city.rua = 'Rua Margarida de Andrade Weber, 601 - CIC'
     city.whats= '(41) 3246 4142'
     city.tel = '(41) 3246 4142'
+    city.site = 'https://central.lykenet.com.br/central_assinante_web/login'
   }
 
   if(cidade === "Pinheirinho" ){
@@ -136,20 +136,23 @@ async function escolherCidade() {
     city.rua = 'Rua Manoel Ribas, nº 1357, Cachoeira'
     city.whats = '(41) 4063 7444'
     city.tel = '(41) 4063 7444'
+    city.site = 'https://araucaria.lykenet.com.br/central_assinante_web/'
   }
-  if(cidade === "CidadeIndustrialCuritiba" ){
-    city.localizacao = 'Cidade Industrial Curitiba'
-    city.name = 'Curitiba'
-    city.rua = 'Rua Margarida de Andrade Weber, 601 - CIC'
-    city.whats= '(41) 3246 4142'
-    city.tel = '(41) 3246 4142'
-  }
+  // if(cidade === "CidadeIndustrialCuritiba" ){
+  //   city.localizacao = 'Cidade Industrial Curitiba'
+  //   city.name = 'Curitiba'
+  //   city.rua = 'Rua Margarida de Andrade Weber, 601 - CIC'
+  //   city.whats= '(41) 3246 4142'
+  //   city.tel = '(41) 3246 4142'
+  //   city.site = 'https://central.lykenet.com.br/central_assinante_web/login'
+  // }
   if(cidade === "Tatuaquara" ){
     city.localizacao = 'Tatuaquara'
     city.name = 'Curitiba'
     city.rua = 'Rua Margarida de Andrade Weber, 601 - CIC'
     city.whats= '(41) 3246 4142'
     city.tel = '(41) 3246 4142'
+    city.site = 'https://central.lykenet.com.br/central_assinante_web/login'
   }
   if(cidade === "Campo de Santana" ){
     city.localizacao = 'Campo de Santana'
@@ -157,14 +160,15 @@ async function escolherCidade() {
     city.rua = 'Rua Margarida de Andrade Weber, 601 - CIC'
     city.whats= '(41) 3246 4142'
     city.tel = '(41) 3246 4142'
+    city.site = 'https://central.lykenet.com.br/central_assinante_web/login'
   }
-  if(cidade === "CapaoRaso" ){
-    city.localizacao = 'Capão Raso'
-    city.name = 'Curitiba'
-    city.rua = 'Rua Margarida de Andrade Weber, 601 - CIC'
-    city.whats= '(41) 3246 4142'
-    city.tel = '(41) 3246 4142'
-  }
+  // if(cidade === "CapaoRaso" ){
+  //   city.localizacao = 'Capão Raso'
+  //   city.name = 'Curitiba'
+  //   city.rua = 'Rua Margarida de Andrade Weber, 601 - CIC'
+  //   city.whats= '(41) 3246 4142'
+  //   city.tel = '(41) 3246 4142'
+  // }
 
   if(cidade === "AraucariaRural" ){
     city.localizacao = 'Araucária Rural'
@@ -172,6 +176,7 @@ async function escolherCidade() {
     city.rua = 'Rua Margarida de Andrade Weber, 601 - CIC'
     city.whats= '(41) 3246 4142'
     city.tel = '(41) 3514 4999'
+    city.site = 'https://fazenda.lykenet.com.br/central_assinante_web/login'
   }
 
   if (cidade === 'FazendaRioGrande') {
@@ -180,6 +185,7 @@ async function escolherCidade() {
     city.rua = 'Rua Nossa Senhora Aparecida ,1425'
     city.whats= '(41) 3246 4142'
     city.tel = '(41) 3514 4999'
+    city.site = 'https://fazenda.lykenet.com.br/central_assinante_web/login'
   }
   if (cidade === 'Araucaria1') {
     city.localizacao = 'Araucária Matriz'
@@ -187,6 +193,7 @@ async function escolherCidade() {
     city.rua = 'Rua Manoel Ribas, nº 1357, Cachoeira'
     city.whats= '(41) 4063 7444'
     city.tel = '(41) 4063 7444'
+    city.site = 'https://araucaria.lykenet.com.br/central_assinante_web/'
   }
   if (cidade === 'Araucaria2') {
     city.localizacao = 'Araucária Filial'
@@ -194,13 +201,15 @@ async function escolherCidade() {
     city.rua = 'Rua Uirapuru, nº 907, Capela Velha'
     city.whats= '(41) 4063 7444'
     city.tel = '(41) 4063 7444'
+    city.site = 'https://araucaria.lykenet.com.br/central_assinante_web/'
   }
-  $whats= city.whats.replace("(","").replace(")","").replace(/( )+/g, '')
 
   $('.cidadeEscolhida').text(`${city.localizacao}`);
   $('#cidadeContato').text(`${city.name}`);
   $('#address').text(`${city.rua}`);
-  $('#tel').text(`${city.tel}`);
+  $('#tel').text('0800-580-4103');
+  $('.areaAssinante').attr('href', city.site)
+
 
 
   // $.ajax({
